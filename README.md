@@ -30,16 +30,28 @@ after that, it shows you the range of the things showing, for example, it shows 
 its something like this:
 
 (4 each side)
+  
+``` 
 [0] [0] [23] [5] [8] [48] [65] [0] [10]  (the value cell line)
+
                   ^                      (the pointer line)
- 3                                  11   (the ranges line)
+
+3                                   11   (the ranges line)
+```
 
  if it couldn't print the far most right(or the far most left) cell(because its going to hit the end and the start of the cell list), then it will handle that as well
+
+  
 (4 each side)
+
+```
 [0] [0] [23] [5] [8] [48] [65] [0] [10]  (the value cell line)
+
      ^                                   (the pointer line)
- 1                                  9    (the ranges line)
  
+ 1                                  9    (the ranges line)
+```
+  
 i does this so the amount of cells printed, remains the same
   
   
