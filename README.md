@@ -1,5 +1,5 @@
 # Visual-Brainfuck-Interpreter-VBI
-one of the slowest interpreters for brainfuck! complete with visualization!
+one of the slowest interpreters for brainfuck! complete with visualization! made with python
 
 ## About BrainFuck:
 An esoteric programing language that was built by urban miller at the 1990s. one of the first and most intrestings.
@@ -10,11 +10,25 @@ more at(i highly recommend reading these):
 * [wikipedia](https://en.wikipedia.org/wiki/Brainfuck)
 
 ## The Basics
-the basics of the lang
+if you don't know how the language works, i hugely recommend you read this part, or watch a youtube video about it.
+* [trutles youtube chanell](https://www.youtube.com/watch?v=dxJpGVaCAyU)
+* [How Brainfuck Works](https://www.youtube.com/watch?v=-3C200nCwpk)
 
+basily, the program uses only 8 commands, it has an arryay of cells with values on each of the cell
+you can increase or decrease the value in each cell
+you have a pointer pointing to a cell at every moment. if you want to do someting with a cell, you have to put the pointer to it
+you can movet the pointer with "<" and ">" command 
+you can increase or decrease the value of the cell you are pointing on by one, with the "+" and "-" commands
+you can get input with "," and print the ascii value of the current cell with "."
+by using brackets, you create a loop
+if the value in the currant cell is not 0, then it does the instructions in the brackets
+if at the end of a bracket, the value on the currant cell was not 0, it will do the instructions again
+and that was the whole language.
+but i highly recommend watching a video on it
 
 ## Goal
 this interpreter was built because i couldent find a visual interpreter that was not only on the web and i could use it offline. so i made my own!
+
 note that there are good interpreter out there, i just couldn't find them at the moment and the project seemed fun enough to work on.
 
 
@@ -103,4 +117,6 @@ q    # you can just add this to anywhere in your code, and the program will stop
 "#"  # you can comment your code with this. NOTE: you can only add it to the start of a line
 ```
   
-  # THE PAGE IS NOT DONE
+## future
+it still has some problems, but i try to fix them all
+  
