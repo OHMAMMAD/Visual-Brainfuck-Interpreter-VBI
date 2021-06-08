@@ -2,11 +2,11 @@
 one of the slowest interpreters for brainfuck! complete with visualization!
 
 ## BrainFuck:
-
+* [esolangs.org](https://esolangs.org/wiki/Brainfuck)
+* [wikipedia](https://en.wikipedia.org/wiki/Brainfuck)
 
 
 this interpreter was built because i couldent find a visual interpreter that was not only on the web and i could use it offline. so i made my own!
-
 
 
 this brainfuck interpreter is one of the slowest mainly because of two reseaons:
