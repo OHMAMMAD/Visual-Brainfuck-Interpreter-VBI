@@ -46,11 +46,11 @@ its something like this:
 (4 each side)
   
 ``` 
-[0] [0] [23] [5] [8] [48] [65] [0] [10]  (the value cell line)
+[0] [0] [23] [5] [8] [48] [65] [0] [10]   # (the value cell line)
 
-                  ^                      (the pointer line)
+                  ^                       # (the pointer line)
 
-3                                   11   (the ranges line)
+3                                   11    # (the ranges line)
 ```
 
  if it couldn't print the far most right(or the far most left) cell(because it is going to hit the end and the start of the cell list), then it will handle that as well
@@ -59,11 +59,11 @@ its something like this:
 (4 each side)
 
 ```
-[0] [0] [23] [5] [8] [48] [65] [0] [10]  (the value cell line)
+[0] [0] [23] [5] [8] [48] [65] [0] [10]   # (the value cell line)
 
-     ^                                   (the pointer line)
+     ^                                    # (the pointer line)
  
- 1                                  9    (the ranges line)
+ 1                                  9     # (the ranges line)
 ```
   
 it does this so the amount of cells printed remains the same
