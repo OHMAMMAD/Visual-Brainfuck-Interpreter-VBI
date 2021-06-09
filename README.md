@@ -117,11 +117,14 @@ q    # you can just add this to anywhere in your code, and the program will stop
 "#"  # you can comment your code with this. NOTE: you can only add it to the start of a line
 ```
   
-## Future
+# Future
 it still has some problems, but I try to fix them all. exept that, here are some improvements I want to make:
+  
   ### Flags
    #### Rename
+ 
     maybe i will rename the -s command(show visuals) to -v(visuals), so i can use the -s flag for something else
+  
    #### Adding More  Flags
    * -d <value>   "dalay after each command"
    * -p           "output only the parsed version of the code"
