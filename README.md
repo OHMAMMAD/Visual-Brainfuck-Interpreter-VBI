@@ -117,6 +117,20 @@ q    # you can just add this to anywhere in your code, and the program will stop
 "#"  # you can comment your code with this. NOTE: you can only add it to the start of a line
 ```
   
-## future
-it still has some problems, but I try to fix them all
+## Future
+it still has some problems, but I try to fix them all. exept that, here are some improvements I want to make:
+  ### Flags
+   #### Rename
+    maybe i will rename the -s command(show visuals) to -v(visuals), so i can use the -s flag for something else
+   #### Adding More  Flags
+   * -d <value>   "dalay after each command"
+   * -p           "output only the parsed version of the code"
+   and more....
+  ### Spacial Features
+   i have some features in this project that are only available to this interpreter. you can visit them by going to: [Special Features](#special-features)
+   
+   but i can add more  to it, I don't know what i can add to improve code writing right now, so if enyone is reading this, please suggest everything that comes to your mind.
+
   
+  
+ #make it so that you can add hash sign every where, not only at the start
