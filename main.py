@@ -78,9 +78,12 @@ class Cell:
 	def getValue(self):
 		return self.value
 
-pointer = 0
-step = 0
-cellListArray = [Cell()]
+	def printValue(self):
+		output = self.getValue()
+		if output > 127:
+			output -= 127
+		print(output)
+
 
 def makeSTR(theList, bracket):
 	output = ''
@@ -127,11 +130,6 @@ def showVisuals(areaShowingEachSide):
 	print(makeSTR(pointerList, False))
 	print(makeSTR(indexList, False))
 
-for i in range(2 ** 13):
-	cellListArray.append(Cell())
-
-
-code = ''
 
 def jumpToEndOfBracket(firstBracketPos):
 	#NOTE: PLEASE READ THE COMMENTS FROM THE "jumpToStartOfBracket"
@@ -176,17 +174,45 @@ def jumpToStartOfBracket(endBracketPos):
 			openBrackets += 1
 
 
+pointer = 0
+step = 0
+cellListArray = [Cell()]
+
+
+code = ''
+
+amountOfCells = 2 ** 11
 userFileName = sys.argv[1]
 areaEachSide = 5
+display = False
+isDelay = False
+onlyParse = False
 for i in range(len(sys.argv)):
-	display = False
-	isDelay = False
 
-	if sys.argv[i] == '-s':
+	if sys.argv[i] == '-v':
 		display = True
+		if i + 1 != len(sys.argv):
+
+			if (sys.argv[i + 1])[0] != '-':
+				areaEachSide = int(sys.argv[i + 1])
+
 	if sys.argv[i] == '-d':
+		print('delay on')
 		isDelay = True
-		delay = int(sys.argv[i + 1])
+		delay = float(sys.argv[i + 1])
+		print(delay)
+
+	if sys.argv[i] == '-a':
+		amountOfCells = int(sys.argv[i + 1 ])
+
+	if sys.argv[i] == '-p':
+		onlyParse = True
+
+
+for i in range(amountOfCells):
+	cellListArray.append(Cell())
+
+
 file = open(userFileName, 'r')
 code = file.read()
 #print(code)
@@ -202,6 +228,9 @@ while command < len(code):
 	commandSTR = code[command]
 	step += 1
 	#print(f'the command is: {commandSTR} and is in pos: {command}')
+	if onlyParse:
+
+		break
 	if commandSTR == '>':
 		if pointer + 1 == len(cellListArray):
 			pointer = -1
