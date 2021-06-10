@@ -24,14 +24,25 @@ def joinListElements(theList):
 		output += i
 	return output
 
+def returnWithoutHash(lineOfText):
+	output = ''
+	for i in lineOfText:
+		if i == '#':
+			break
+		output += i
+
+	return output
+
+
 def parser(code):
 	arrayOfCode = code.split('\n')
 	tempArrayOfCode = []
 
 	for line in arrayOfCode:
 		if line != '' and line[0] != '#':
-			line = removeSpace(line)  # the last two lines: removing spaces in each line
+			line = removeSpace(line)  # removing spaces in each line
 
+			line = returnWithoutHash(line) # remove everything after "#" sign
 			line = removeExtraCharecters(line) # removing every charecter that is not one of the 8 main charecters
 
 
@@ -39,7 +50,7 @@ def parser(code):
 
 
 	arrayOfCode = tempArrayOfCode
-	if display:
+	if display or showCodeFirst:
 		print('\n\n' + joinListElements(arrayOfCode) + '\n\n')
 	return joinListElements(arrayOfCode)
 
@@ -100,7 +111,7 @@ def showVisuals(areaShowingEachSide):
 	pointerList = []
 	indexList = []
 	visualPointer = pointer + ((pointer - areaShowingEachSide) * -1)
-	
+
 	start = pointer - areaShowingEachSide
 	end = pointer + areaShowingEachSide + 1
 
@@ -108,7 +119,7 @@ def showVisuals(areaShowingEachSide):
 		end += start * -1 # num is negative
 		visualPointer -= start * -1 # num is negative
 		start = 0
-	
+
 	if end > len(cellListArray) - 1:
 		start += len(cellListArray) - end # num is negative
 		visualPointer -= len(cellListArray) - end # num is negative
@@ -122,7 +133,7 @@ def showVisuals(areaShowingEachSide):
 		counter += 1
 
 
-	indexList[0] = str(start + 1) + ((3 - len(str(start + 1))) * ' ') + ' ' 
+	indexList[0] = str(start + 1) + ((3 - len(str(start + 1))) * ' ') + ' '
 	# adds the number of spaces needed, to push the end number enough to the right
 	indexList[len(visualList) - 1] = str(end)
 	pointerList[visualPointer] = ' ' + len(str(visualList[visualPointer])) * '^'
@@ -185,6 +196,7 @@ amountOfCells = 2 ** 11
 userFileName = sys.argv[1]
 areaEachSide = 5
 display = False
+showCodeFirst = False
 isDelay = False
 onlyParse = False
 for i in range(len(sys.argv)):
@@ -207,6 +219,7 @@ for i in range(len(sys.argv)):
 
 	if sys.argv[i] == '-p':
 		onlyParse = True
+		showCodeFirst = True
 
 
 for i in range(amountOfCells):
