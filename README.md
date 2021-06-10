@@ -104,8 +104,10 @@ python main.py examples/hanoi.b
 this interpreter doesn't have that many arguments 
 
 ```
--s    # to show the visualization
-# others are broken right now
+* -d <value>           "dalay after each command"
+* -p                   "output only the parsed version of the code"
+* -v <amount>/nothing  "activates the visuals. you can enter a number after it so it shows n cells each side if you don't, the defullt is 5)"   
+* -a <amount>          "how long do you want the cell aray to be?(how many cells)"
 ```
   
 ## Special Features
@@ -121,14 +123,7 @@ q    # you can just add this to anywhere in your code, and the program will stop
 it still has some problems, but I try to fix them all. exept that, here are some improvements I want to make:
   
   ### Flags
-   #### Rename
- 
-    maybe i will rename the -s command(show visuals) to -v(visuals), so i can use the -s flag for something else
-  
-   #### Adding More  Flags
-   * -d <value>   "dalay after each command"
-   * -p           "output only the parsed version of the code"
-   and more....
+  I don't have any plans now, but you can suggest!
   ### Spacial Features
    i have some features in this project that are only available to this interpreter. you can visit them by going to: [Special Features](#special-features)
    
