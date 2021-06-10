@@ -116,7 +116,7 @@ note that these commands are made for you to use IN the code
 
 ```
 q    # you can just add this to anywhere in your code, and the program will stop running when it hits that point. this REALLY helps de-bugging HUGELY
-"#"  # you can comment your code with this. NOTE: you can only add it to the start of a line
+"#"  # you can comment your code with this. everything after it will be ignored
 ```
   
 # Future
