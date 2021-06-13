@@ -199,6 +199,7 @@ display = False
 showCodeFirst = False
 isDelay = False
 onlyParse = False
+commandLineCoding = False
 for i in range(len(sys.argv)):
 
 	if sys.argv[i] == '-v':
@@ -221,16 +222,19 @@ for i in range(len(sys.argv)):
 		onlyParse = True
 		showCodeFirst = True
 
+	if sys.argv[i] == '-i':
+		commandLineCoding = True
+		code = sys.argv[1]
 
 for i in range(amountOfCells):
 	cellListArray.append(Cell())
 
-
-file = open(userFileName, 'r')
-code = file.read()
-#print(code)
+if not commandLineCoding:
+	file = open(userFileName, 'r')
+	code = file.read()
+	file.close()
+	
 code = parser(code)
-file.close()
 
 
 if display:
