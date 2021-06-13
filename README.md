@@ -69,12 +69,12 @@ its something like this:
 it does this so the amount of cells printed remains the same
   
   
-## how to use:
+## How To Use
 I don't know how to install my code on someone's computer in a way that they can use the command line to use it, but it's not that bad after all.
 after downloading(or cloning) the "main.py" file into your computer, and having python installed and your brainfuck code ready, you can type this command in your command line.
 
 ```
-python main.py [file path] <args>
+python main.py [file path or code(check Flags)] <args>
 ```
 
 I have some examples ready for you if you don't have a brainfuck code.
@@ -83,7 +83,11 @@ after cloning into the project:
 python main.py "examples/fib.b"
 # prints the FibonaccI sequence
 ```
-
+or you can say:
+ ```
+ python main.py ">>++++ ++[>++++ ++++ +++<-]>-." -i
+ # prints "A"
+  ```
 
 ## not so great...
 this brainfuck interpreter is one of the slowest, mainly because of two reasons:
@@ -103,12 +107,12 @@ python main.py examples/hanoi.b
 ## Flags
 this interpreter doesn't have that many arguments 
 
-```
-* -d <value>           "dalay after each command"
-* -p                   "output only the parsed version of the code"
-* -v <amount>/nothing  "activates the visuals. you can enter a number after it so it shows n cells each side if you don't, the defullt is 5)"   
-* -a <amount>          "how long do you want the cell aray to be?(how many cells)"
-```
+
+* '-d' {value}           "dalay after each command"
+* '-p'                   "output only the parsed version of the code"
+* '-v' {amount}/nothing  "activates the visuals. you can enter a number after it so it shows n cells each side if you don't, the defullt is 5)"   
+* '-a' {amount}          "how long do you want the cell aray to be?(how many cells)"
+* '-i'                   "insted of interpreting the code in the filepath, interpret the code that is writen there(please check [How To Use](#how-to-use) for an example)"
   
 ## Special Features
 I've added some extra features to this interpreter to help de-bugging programs. it's my code after all
@@ -129,6 +133,3 @@ it still has some problems, but I try to fix them all. exept that, here are some
    
    but i can add more  to it, I don't know what i can add to improve code writing right now, so if enyone is reading this, please suggest everything that comes to your mind.
 
-  
-  
- #make it so that you can add hash sign every where, not only at the start
