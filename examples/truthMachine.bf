@@ -34,7 +34,7 @@ please dont mind my REALLY bad commenting
 [ # if the "if" statement outputs true, we will enter this
 
 
-<<<+[.>>.<<q] # will print 1 on the screen for ever!(adding 1 to 48)
+<<<+[.>>.<<] # will print 1 on the screen for ever!(adding 1 to 48)
 # so program will stop running code because its an endless loop
 ]
 
