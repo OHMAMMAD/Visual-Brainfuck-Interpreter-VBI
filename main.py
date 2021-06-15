@@ -110,6 +110,7 @@ def showVisuals(areaShowingEachSide):
 	visualList = []
 	pointerList = []
 	indexList = []
+	lenCellListArray = len(cellListArray)
 	visualPointer = pointer + ((pointer - areaShowingEachSide) * -1)
 
 	start = pointer - areaShowingEachSide
@@ -120,10 +121,10 @@ def showVisuals(areaShowingEachSide):
 		visualPointer -= start * -1 # num is negative
 		start = 0
 
-	if end > len(cellListArray) - 1:
-		start += len(cellListArray) - end # num is negative
-		visualPointer -= len(cellListArray) - end # num is negative
-		end = len(cellListArray)
+	if end > lenCellListArray - 1:
+		start += lenCellListArray - end # num is negative
+		visualPointer -= lenCellListArray - end # num is negative
+		end = lenCellListArray
 
 	counter = 0
 	for i in range(start, end):
@@ -151,7 +152,7 @@ def jumpToEndOfBracket(firstBracketPos):
 	firstBracketPos += 1
 	openBrackets = 0
 
-	for i in range(len(code) - firstBracketPos):
+	for i in range(lenCode - firstBracketPos):
 		I = code[i + firstBracketPos]
 		#code starts
 		if I == ']':
@@ -168,7 +169,7 @@ def jumpToStartOfBracket(endBracketPos):
 	openBrackets = 0
 	endBracketPos += 1
 
-	for i in range(len(code) - 1 - (len(code) - endBracketPos), -1, -1):
+	for i in range(lenCode - 1 - (lenCode - endBracketPos), -1, -1):
 		# line abov will close the area that we are searching in,
 		# and makes it so that the search starts from the bracket and
 		# not from before it, if we didnt had this, we would start from
@@ -233,15 +234,15 @@ if not commandLineCoding:
 	file = open(userFileName, 'r')
 	code = file.read()
 	file.close()
-	
-code = parser(code)
 
+code = parser(code)
+lenCode = len(code)
 
 if display:
 	showVisuals(areaEachSide)
 
 command = 0
-while command < len(code):
+while command < lenCode:
 	commandSTR = code[command]
 	step += 1
 	#print(f'the command is: {commandSTR} and is in pos: {command}')
