@@ -110,7 +110,6 @@ def showVisuals(areaShowingEachSide):
 	visualList = []
 	pointerList = []
 	indexList = []
-	lenCellListArray = len(cellListArray)
 	visualPointer = pointer + ((pointer - areaShowingEachSide) * -1)
 
 	start = pointer - areaShowingEachSide
@@ -237,6 +236,7 @@ if not commandLineCoding:
 
 code = parser(code)
 lenCode = len(code)
+lenCellListArray = len(cellListArray)
 
 if display:
 	showVisuals(areaEachSide)
@@ -250,12 +250,12 @@ while command < lenCode:
 
 		break
 	if commandSTR == '>':
-		if pointer + 1 == len(cellListArray):
+		if pointer + 1 == lenCellListArray:
 			pointer = -1
 		pointer += 1
 	if commandSTR == '<':
 		if pointer == 0:
-			pointer = len(cellListArray)
+			pointer = lenCellListArray
 		pointer -= 1
 	if commandSTR == '+':
 		cellListArray[pointer].addOne()
