@@ -67,7 +67,12 @@ its something like this:
 ```
   
 it does this so the amount of cells printed remains the same
-  
+
+## Examples
+most of the examples provided are from the amazing, Daniel B Cristofani
+  * [his website](http://www.hevanet.com/cristofd/)
+  * [his brainfuck page](http://brainfuck.org/)
+  * [his git hub](https://github.com/danielcristofani)
   
 ## How To Use
 I don't know how to install my code on someone's computer in a way that they can use the command line to use it, but it's not that bad after all.
