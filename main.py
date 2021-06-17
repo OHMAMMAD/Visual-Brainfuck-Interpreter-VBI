@@ -3,6 +3,7 @@
 import time
 import sys
 
+featuresList = ['q', '#']
 
 def removeSpace(text):
 	text = text.split(' ')
@@ -30,7 +31,15 @@ def returnWithoutHash(lineOfText):
 		if i == '#':
 			break
 		output += i
+	return output
 
+def returnWithoutFeatures(line):
+	output = ''
+	for i in line:
+		if i not in featuresList:
+			output += i
+
+	print(output)
 	return output
 
 
@@ -42,6 +51,8 @@ def parser(code):
 		if line != '' and line[0] != '#':
 			line = removeSpace(line)  # removing spaces in each line
 
+			if extraFeatures:
+				line = returnWithoutFeatures(line)
 			line = returnWithoutHash(line) # remove everything after "#" sign
 			line = removeExtraCharecters(line) # removing every charecter that is not one of the 8 main charecters
 
@@ -200,6 +211,7 @@ showCodeFirst = False
 isDelay = False
 onlyParse = False
 commandLineCoding = False
+extraFeatures = True
 for i in range(len(sys.argv)):
 
 	if sys.argv[i] == '-v':
@@ -225,6 +237,9 @@ for i in range(len(sys.argv)):
 	if sys.argv[i] == '-i':
 		commandLineCoding = True
 		code = sys.argv[1]
+	if sys.argv[i] == '-f':
+		extraFeatures = False
+
 
 for i in range(amountOfCells):
 	cellListArray.append(Cell())
