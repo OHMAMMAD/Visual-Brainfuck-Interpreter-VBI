@@ -39,7 +39,6 @@ def returnWithoutFeatures(line):
 		if i not in featuresList:
 			output += i
 
-	print(output)
 	return output
 
 
