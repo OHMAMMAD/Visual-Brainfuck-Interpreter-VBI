@@ -87,12 +87,7 @@ class Cell:
 		if theInput == '':
 			self.value = 10
 			return
-		if len(theInput) == 1:
-			self.value = ord(theInput)
-			return
-		for char in range(len(theInput)):
-			cellListArray[thePointer].getInput(theInput[char], thePointer)
-			thePointer += 1
+		self.value = ord(theInput[0])
 
 		# cells value is now the ascii value of the inputed string
 
