@@ -69,7 +69,7 @@ its something like this:
 it does this so the amount of cells printed remains the same
 
 ## Examples
-most of the examples provided are from the amazing, Daniel B Cristofani
+most of the examples provided are from Daniel B Cristofani
   * [his website](http://www.hevanet.com/cristofd/)
   * [his brainfuck page](http://brainfuck.org/)
   * [his git hub](https://github.com/danielcristofani)
@@ -94,19 +94,17 @@ or you can say:
  # prints "A"
   ```
 
-## not so great...
-this brainfuck interpreter is one of the slowest, mainly because of two reasons:
+## Speed
 
-1) this is on python(let's just blame python instead of my bad coding skills)
-
-2) I'm not the greatest of coders/programers
-
-one of the things associated with an interpreter's speed is to test a program with it.
-this great piece of code can run towers of Hanoi in...Ummm..... I'm not sure how long. I wanted to test it one time, but it took more than 1h 10m so I just gave up
-
+  I have tried to make this as fast as i can. i am not the best of programmers, but im pretty proud with its speed.
+  the first version is one of the slowest things you can find on the internet. but the last version(v3.0 at the time) is pretty fast.
+  its up to 306 times faster than the first version. and in some special tests, its the fastest thing i could find by far.
+  
+  if you use a real test(hanoi.b) i get the second spot with about 11 minutes to compile.
+  
 ```
 python main.py examples/hanoi.b
-# takes more than 1h 10m
+# takes around 11 minutes
 ```
 
 ## Flags
@@ -123,6 +121,8 @@ this interpreter doesn't have that many arguments
 I've added some extra features to this interpreter to help de-bugging programs. it's my code after all
 note that these commands are made for you to use IN the code
 
+### THESE FEAURES ARE ONLY AVALABLE IN THE FIRST VERSION
+  
 ```
 q    # you can just add this to anywhere in your code, and the program will stop running when it hits that point. this REALLY helps de-bugging HUGELY
 "#"  # you can comment your code with this. everything after it will be ignored
@@ -131,10 +131,5 @@ q    # you can just add this to anywhere in your code, and the program will stop
 # Future
 it still has some problems, but I try to fix them all. exept that, here are some improvements I want to make:
   
-  ### Flags
+  ### More Flags
   I don't have any plans now, but you can suggest!
-  ### Spacial Features
-   i have some features in this project that are only available to this interpreter. you can visit them by going to: [Special Features](#special-features)
-   
-   but i can add more  to it, I don't know what i can add to improve code writing right now, so if enyone is reading this, please suggest everything that comes to your mind.
-
