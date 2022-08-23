@@ -18,9 +18,16 @@ for more information and simpler explanation about brainfuck, i recommend:
 ## How Debuging Works:
 this program was made with a visualization feature to help debugging code better
 
-you can activate it with one of the arguments. go to: [Flags](#flags)
+you can activate it with '-v' argument. go to [Flags](#flags) for explanation
+
 
 ### example:
+```
+``
+python main.py [filepath] -v
+``
+```
+
 
 (4 each side)
   
